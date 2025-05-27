@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        "minecraft:purple_dye",
+        "minecraft:gunpowder",
+        "minecraft:diamond",
+        "minecraft:bone_meal"
+    ],
+    "result": {
+        "id": "tutorial-mod:suspicious_substance",
+        "count": 1
+    }
+}

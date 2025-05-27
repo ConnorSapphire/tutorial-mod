@@ -1,18 +1,18 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "tutorial-mod",
 	"version": "${version}",
-	"name": "Example mod",
+	"name": "Tutorial mod",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"ConnorSapphire"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"icon": "assets/tutorial-mod/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -23,9 +23,9 @@
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
+		"tutorial-mod.mixins.json",
 		{
-			"config": "modid.client.mixins.json",
+			"config": "tutorial-mod.client.mixins.json",
 			"environment": "client"
 		}
 	],

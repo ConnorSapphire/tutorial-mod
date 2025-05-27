@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "/",
+        "/"
+    ],
+    "key": {
+        "#": "tutorial-mod:suspicious_substance",
+        "/": "minecraft:stick"
+    },
+    "result": {
+        "id": "tutorial-mod:wand",
+        "count": 1
+    }
+}
