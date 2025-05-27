@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        "minecraft:bowl",
+        "tutorial-mod:suspicious_substance"
+    ],
+    "result": {
+        "id": "tutorial-mod:bowl_of_sewage",
+        "count": 1
+    }
+}
