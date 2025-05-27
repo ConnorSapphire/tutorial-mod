@@ -1,5 +1,9 @@
 {
   "item.tutorial-mod.suspicious_substance": "Suspicious Substance",
   "item.tutorial-mod.bowl_of_sewage": "Bowl of Sewage",
-  "item.tutorial-mod.sapphire_sword": "Sapphire Sword"
+  "item.tutorial-mod.sapphire_sword": "Sapphire Sword",
+  "item.tutorial-mod.sapphire_helmet": "Sapphire Helmet",
+  "item.tutorial-mod.sapphire_chestplate": "Sapphire Chestplate",
+  "item.tutorial-mod.sapphire_leggings": "Sapphire Leggings",
+  "item.tutorial-mod.sapphire_boots": "Sapphire Boots"
 }

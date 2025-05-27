@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "tutorial-mod:sapphire"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "tutorial-mod:sapphire"
+      }
+    ]
+  }
+}

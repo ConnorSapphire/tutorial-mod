@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -14,13 +15,54 @@ import net.minecraft.util.Identifier;
 import java.util.function.Function;
 
 public class ModItems {
-    public static final Item SUSPICIOUS_SUBSTANCE = register("suspicious_substance", SuspiciousSubstance::new, new Item.Settings());
-    public static final Item BOWL_OF_SEWAGE = register("bowl_of_sewage", Item::new, new Item.Settings().food(ModFoodComponents.BOWL_OF_SEWAGE, ModFoodComponents.BOWL_OF_SEWAGE_EFFECT));
-    public static final Item SAPPHIRE_SWORD = register("sapphire_sword", setting -> new Item(setting.sword(ModToolMaterials.SAPPHIRE_TOOL_MATERIAL, 4.0f, -2.8f)), new Item.Settings());
+    public static final Item SUSPICIOUS_SUBSTANCE = register(
+            "suspicious_substance",
+            SuspiciousSubstance::new,
+            new Item.Settings()
+    );
+    public static final Item BOWL_OF_SEWAGE = register(
+            "bowl_of_sewage",
+            Item::new,
+            new Item.Settings().food(ModFoodComponents.BOWL_OF_SEWAGE, ModFoodComponents.BOWL_OF_SEWAGE_EFFECT)
+    );
+    public static final Item SAPPHIRE_SWORD = register(
+            "sapphire_sword",
+            setting -> new Item(setting.sword(ModToolMaterials.SAPPHIRE_TOOL_MATERIAL, 4.0f, -2.8f)),
+            new Item.Settings()
+    );
+    public static final Item SAPPHIRE_HELMET = register(
+            "sapphire_helmet",
+            settings -> new Item(settings.armor(ModArmorMaterial.SAPPHIRE_ARMOR_MATERIAL, EquipmentType.HELMET)),
+            new Item.Settings().maxDamage(EquipmentType.HELMET.getMaxDamage(ModArmorMaterial.SAPPHIRE_BASE_DURABILITY))
+    );
+    public static final Item SAPPHIRE_CHESTPLATE = register("sapphire_chestplate",
+            settings -> new Item(settings.armor(ModArmorMaterial.SAPPHIRE_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)),
+            new Item.Settings().maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(ModArmorMaterial.SAPPHIRE_BASE_DURABILITY))
+    );
+
+    public static final Item SAPPHIRE_LEGGINGS = register(
+            "sapphire_leggings",
+            settings -> new Item(settings.armor(ModArmorMaterial.SAPPHIRE_ARMOR_MATERIAL, EquipmentType.LEGGINGS)),
+            new Item.Settings().maxDamage(EquipmentType.LEGGINGS.getMaxDamage(ModArmorMaterial.SAPPHIRE_BASE_DURABILITY))
+    );
+
+    public static final Item SAPPHIRE_BOOTS = register(
+            "sapphire_boots",
+            settings -> new Item(settings.armor(ModArmorMaterial.SAPPHIRE_ARMOR_MATERIAL, EquipmentType.BOOTS)),
+            new Item.Settings().maxDamage(EquipmentType.BOOTS.getMaxDamage(ModArmorMaterial.SAPPHIRE_BASE_DURABILITY))
+    );
 
     public static void initialize() {
         // Get the event for modifying entries in the ingredients group.
         // And register an event handler that adds our suspicious item to the ingredients group.
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
+                .register((itemGroup) -> itemGroup.add(ModItems.SAPPHIRE_HELMET));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
+                .register((itemGroup) -> itemGroup.add(ModItems.SAPPHIRE_CHESTPLATE));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
+                .register((itemGroup) -> itemGroup.add(ModItems.SAPPHIRE_LEGGINGS));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
+                .register((itemGroup) -> itemGroup.add(ModItems.SAPPHIRE_BOOTS));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
                 .register((itemGroup) -> itemGroup.add(ModItems.SAPPHIRE_SWORD));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK)
