@@ -56,6 +56,14 @@ public class ModItems {
             new Item.Settings().maxDamage(EquipmentType.BOOTS.getMaxDamage(ModArmorMaterial.SAPPHIRE_BASE_DURABILITY))
     );
 
+    public static final Item COUNTER = register(
+            "counter",
+            CounterItem::new,
+            new Item.Settings()
+                    // Initialize the click count component with a default value of 0
+                    .component(ModComponents.CLICK_COUNT_COMPONENT, 0)
+    );
+
     // Item groups
     public static final RegistryKey<ItemGroup> CUSTOM_ITEM_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(ExampleMod.MOD_ID, "item_group"));
     public static final ItemGroup CUSTOM_ITEM_GROUP = FabricItemGroup.builder()
@@ -86,7 +94,7 @@ public class ModItems {
         // Register the group.
         Registry.register(Registries.ITEM_GROUP, CUSTOM_ITEM_GROUP_KEY, CUSTOM_ITEM_GROUP);
 
-// Register items to the custom item group.
+        // Register items to the custom item group.
         ItemGroupEvents.modifyEntriesEvent(CUSTOM_ITEM_GROUP_KEY)
                 .register(itemGroup -> {
             itemGroup.add(ModItems.SUSPICIOUS_SUBSTANCE);
@@ -96,6 +104,7 @@ public class ModItems {
             itemGroup.add(ModItems.SAPPHIRE_BOOTS);
             itemGroup.add(ModItems.SAPPHIRE_LEGGINGS);
             itemGroup.add(ModItems.SAPPHIRE_CHESTPLATE);
+            itemGroup.add(ModItems.COUNTER);
             // ...
         });
 

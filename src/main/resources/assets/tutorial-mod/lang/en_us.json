@@ -6,5 +6,7 @@
   "item.tutorial-mod.sapphire_chestplate": "Sapphire Chestplate",
   "item.tutorial-mod.sapphire_leggings": "Sapphire Leggings",
   "item.tutorial-mod.sapphire_boots": "Sapphire Boots",
-  "itemGroup.tutorial-mod": "Example Mod"
+  "itemGroup.tutorial-mod": "Example Mod",
+  "item.tutorial-mod.counter": "Counter",
+  "item.tutorial-mod.counter.info": "Used %1$s times"
 }
