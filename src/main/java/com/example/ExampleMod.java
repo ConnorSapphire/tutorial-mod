@@ -18,8 +18,9 @@ public class ExampleMod implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
-		ModItems.initialize();
+		ModBlocks.initialize();
 		ModComponents.initialize();
+		ModItems.initialize();
 
         LOGGER.info("Hello Fabric world!");
 	}

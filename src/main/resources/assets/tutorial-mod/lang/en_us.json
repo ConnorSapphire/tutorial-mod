@@ -8,5 +8,7 @@
   "item.tutorial-mod.sapphire_boots": "Sapphire Boots",
   "itemGroup.tutorial-mod": "Example Mod",
   "item.tutorial-mod.counter": "Counter",
-  "item.tutorial-mod.counter.info": "Used %1$s times"
+  "item.tutorial-mod.counter.info": "Used %1$s times",
+  "item.tutorial-mod.condensed_dirt": "Condensed Dirt",
+  "block.tutorial-mod.condensed_dirt": "Condensed Dirt"
 }
